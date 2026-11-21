@@ -1,0 +1,24 @@
+{
+  "name": "a9-observability",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node --require ./tracing.js index.js",
+    "start:console": "TRACE_OUTPUT=console node --require ./tracing.js index.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "1.9.0",
+    "@opentelemetry/auto-instrumentations-node": "0.58.0",
+    "@opentelemetry/exporter-trace-otlp-proto": "0.200.0",
+    "@opentelemetry/resources": "^2.0.0",
+    "@opentelemetry/sdk-metrics": "2.0.0",
+    "@opentelemetry/sdk-node": "0.200.0",
+    "@opentelemetry/sdk-trace-node": "2.0.0",
+    "@opentelemetry/semantic-conventions": "^1.30.0",
+    "express": "^5.1.0",
+    "mongodb": "^4.3.1"
+  }
+}
